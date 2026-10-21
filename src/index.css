@@ -8,6 +8,9 @@
   --color-muted-mint: #9DC2B8;
   --color-soft-green: #6AA468;
   --color-soft-green-hover: #5B8F5A;
+  --color-action-green: #356B43;
+  --color-action-green-hover: #295735;
+  --color-action-border: #94BC97;
   --color-pale-bg: #EBEFEC;
   --color-light-mint: #E2ECE7;
   --color-off-white: #F4F7F4;
@@ -278,12 +281,17 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--color-soft-green);
-  color: var(--color-white);
+  background-color: var(--color-action-green);
+  color: #fff;
+  font-weight: 700;
+  border: 1.5px solid var(--color-action-border);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 4px 12px rgba(14,24,21,.1);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-soft-green-hover);
+  background-color: var(--color-action-green-hover);
+  color: #fff;
+  border-color: #BED8BF;
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
@@ -299,18 +307,22 @@ p {
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-soft-green);
+  background-color: var(--color-action-green);
   color: var(--color-white);
-  border-color: var(--color-soft-green);
+  border-color: var(--color-action-border);
 }
 
 .btn-accent {
-  background-color: var(--color-soft-green);
-  color: var(--color-white);
+  background-color: var(--color-action-green);
+  color: #fff;
+  font-weight: 700;
+  border: 1.5px solid var(--color-action-border);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18);
 }
 
 .btn-accent:hover {
-  background-color: var(--color-soft-green-hover);
+  background-color: var(--color-action-green-hover);
+  border-color: #BED8BF;
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }

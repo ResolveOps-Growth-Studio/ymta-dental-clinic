@@ -7,6 +7,9 @@ colors:
   muted-mint: "#9DC2B8"
   soft-green: "#6AA468"
   soft-green-hover: "#5B8F5A"
+  action-green: "#356B43"
+  action-green-hover: "#295735"
+  action-border: "#94BC97"
   review-gold: "#D4A853"
   pale-bg: "#EBEFEC"
   warm-white: "#F8FAF7"
@@ -46,7 +49,7 @@ spacing:
   xl: "64px"
 components:
   button-primary:
-    backgroundColor: "{colors.soft-green}"
+    backgroundColor: "{colors.action-green}"
     textColor: "{colors.white}"
     rounded: "{rounded.full}"
     padding: "12px 24px"
@@ -109,11 +112,19 @@ labels, and filters. Borders are light and secondary to tonal separation.
 
 ## Components
 
-- **Buttons:** solid soft-green primary actions, outlined secondary actions, explicit hover,
-  active, and focus-visible states.
+- **Buttons:** action green (#356B43), bold white labels, a mint border (#94BC97),
+  and a darker hover fill (#295735). White-on-fill contrast is 6.3:1 (8.37:1 on hover).
+  Decorative soft green stays unchanged. Secondary buttons retain outlined styling.
 - **Cards:** warm-white or white surfaces with light borders and a restrained hover lift.
 - **Inputs:** white fields, 1.5px borders, dark-teal focus treatment, inline error feedback.
-- **Navigation:** fixed dark translucent header, compact link transitions, and a mobile action bar.
+- **Navigation:** centered warm-white capsule, 720px resting width and up to 1040px after
+  scrolling. Header actions reveal beyond 24px and hide near the top (8px hysteresis).
+  Below 1024px, a 560px-max capsule uses a menu; the Call/Book Visit bottom bar follows
+  the same scroll state. Links, calls, and booking retain their existing destinations.
+- **WhatsApp:** a visible 56px action, a one-time dismissible invitation after 1.6 seconds,
+  and intermittent icon/ring cues. Ambient motion pauses when the document is hidden.
+- **FAQ:** single-open accordion with intrinsic grid expansion; heading and opened answers
+  use a bounded blur-to-sharp word reveal. Reduced motion keeps text immediately readable.
 - **Media comparisons:** native range controls provide pointer, touch, and keyboard access.
 
 ## Do's and Don'ts
@@ -127,5 +138,5 @@ labels, and filters. Borders are light and secondary to tonal separation.
 ### Don't:
 
 - Don't introduce new fonts, fabricated outcomes, or unsupported clinical claims.
-- Don't use aggressive autoplay, bouncing motion, neon glow, or generic dental-template styling.
+- Keep the requested contact cue small and intermittent; avoid aggressive motion or neon glow.
 - Don't publish WhatsApp or before-and-after content until its configuration is confirmed.

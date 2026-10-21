@@ -1,42 +1,127 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-16T00:00:00+05:30",
+  "generatedAt": "2026-10-21T00:00:00+05:30",
   "title": "Design System: YMTA Dental Clinic",
   "extensions": {
     "colorMeta": {
-      "deep-forest": { "role": "primary", "displayName": "Deep Forest", "canonical": "#0E1815" },
-      "dark-teal": { "role": "primary", "displayName": "Clinical Teal", "canonical": "#274242" },
-      "muted-mint": { "role": "secondary", "displayName": "Muted Mint", "canonical": "#9DC2B8" },
-      "soft-green": { "role": "secondary", "displayName": "Soft Green", "canonical": "#6AA468" },
-      "warm-white": { "role": "neutral", "displayName": "Warm White", "canonical": "#F8FAF7" }
+      "deep-forest": {
+        "role": "primary",
+        "displayName": "Deep Forest",
+        "canonical": "#0E1815"
+      },
+      "dark-teal": {
+        "role": "primary",
+        "displayName": "Clinical Teal",
+        "canonical": "#274242"
+      },
+      "muted-mint": {
+        "role": "secondary",
+        "displayName": "Muted Mint",
+        "canonical": "#9DC2B8"
+      },
+      "soft-green": {
+        "role": "secondary",
+        "displayName": "Soft Green",
+        "canonical": "#6AA468"
+      },
+      "warm-white": {
+        "role": "neutral",
+        "displayName": "Warm White",
+        "canonical": "#F8FAF7"
+      },
+      "action-green": {
+        "role": "action",
+        "displayName": "Action Green",
+        "canonical": "#356B43"
+      },
+      "action-green-hover": {
+        "role": "action",
+        "displayName": "Action Green Hover",
+        "canonical": "#295735"
+      },
+      "action-border": {
+        "role": "action",
+        "displayName": "Action Border",
+        "canonical": "#94BC97"
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Editorial Display", "purpose": "Hero and section headings." },
-      "body": { "displayName": "Clinical Body", "purpose": "Copy, navigation, labels, and controls." }
+      "display": {
+        "displayName": "Editorial Display",
+        "purpose": "Hero and section headings."
+      },
+      "body": {
+        "displayName": "Clinical Body",
+        "purpose": "Copy, navigation, labels, and controls."
+      }
     },
     "shadows": [
-      { "name": "ambient-low", "value": "0 4px 12px rgba(14, 24, 21, 0.08)", "purpose": "Interactive cards." },
-      { "name": "ambient-high", "value": "0 16px 50px rgba(14, 24, 21, 0.12)", "purpose": "Media and floating controls." }
+      {
+        "name": "ambient-low",
+        "value": "0 4px 12px rgba(14, 24, 21, 0.08)",
+        "purpose": "Interactive cards."
+      },
+      {
+        "name": "ambient-high",
+        "value": "0 16px 50px rgba(14, 24, 21, 0.12)",
+        "purpose": "Media and floating controls."
+      }
     ],
     "motion": [
-      { "name": "ease-out", "value": "cubic-bezier(0.25, 0.46, 0.45, 0.94)", "purpose": "Routine entrances and feedback." },
-      { "name": "hero-crossfade", "value": "1050ms", "purpose": "Cinematic hero scene transitions." }
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        "purpose": "Routine entrances and feedback."
+      },
+      {
+        "name": "hero-crossfade",
+        "value": "1050ms",
+        "purpose": "Cinematic hero scene transitions."
+      },
+      {
+        "name": "faq-blur-reveal",
+        "value": "320\u2013500ms, stagger capped at 300ms",
+        "purpose": "FAQ heading and opened answers; reduced-motion static alternative."
+      }
     ],
     "breakpoints": [
-      { "name": "mobile", "value": "360px" },
-      { "name": "tablet", "value": "768px" },
-      { "name": "desktop", "value": "1024px" }
+      {
+        "name": "mobile",
+        "value": "360px"
+      },
+      {
+        "name": "tablet",
+        "value": "768px"
+      },
+      {
+        "name": "desktop",
+        "value": "1024px"
+      }
     ]
   },
   "components": [],
   "narrative": {
     "northStar": "Clinical Calm",
     "overview": "Warm, modern dental care expressed through editorial type, muted greens, authentic media, and restrained motion.",
-    "keyCharacteristics": ["Clinically trustworthy", "Warm editorial typography", "Cinematic but accessible"],
-    "rules": [
-      { "name": "Verified Truth", "body": "Use only confirmed clinic facts and consented patient media.", "section": "components" }
+    "keyCharacteristics": [
+      "Clinically trustworthy",
+      "Warm editorial typography",
+      "Cinematic but accessible"
     ],
-    "dos": ["Preserve the incumbent palette and fonts.", "Respect reduced motion and safe areas."],
-    "donts": ["Do not fabricate outcomes.", "Do not add unrelated aesthetic systems."]
+    "rules": [
+      {
+        "name": "Verified Truth",
+        "body": "Use only confirmed clinic facts and consented patient media.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Preserve the incumbent palette and fonts.",
+      "Respect reduced motion and safe areas."
+    ],
+    "donts": [
+      "Do not fabricate outcomes.",
+      "Do not add unrelated aesthetic systems."
+    ]
   }
 }
