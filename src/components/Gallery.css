@@ -1,0 +1,219 @@
+.results {
+  background: var(--color-bg-secondary);
+}
+
+.results__header {
+  max-width: 760px;
+  margin-bottom: var(--space-12);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+}
+
+.results__header.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.results__header .section-title {
+  text-wrap: balance;
+}
+
+.results__filters {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.results__filters button {
+  min-height: 44px;
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-full);
+  background: var(--color-white);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.results__filters button:hover,
+.results__filters button.is-active {
+  border-color: var(--color-dark-teal);
+  background: var(--color-dark-teal);
+  color: var(--color-white);
+}
+
+.results__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
+  gap: var(--space-8);
+}
+
+.results__empty {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+  padding: clamp(2rem, 6vw, 4.5rem);
+  border-radius: var(--border-radius-xl);
+  background: var(--color-warm-white);
+}
+
+.results__empty-visual {
+  display: grid;
+  grid-template-columns: auto minmax(2.5rem, 6rem) auto;
+  align-items: center;
+  color: var(--color-dark-teal);
+}
+
+.results__empty-visual > span {
+  height: 1px;
+  background: var(--color-muted-mint);
+}
+
+.results__empty h3 {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-2xl);
+}
+
+.results__empty p {
+  max-width: 56ch;
+}
+
+@media (min-width: 700px) {
+  .results__empty {
+    grid-template-columns: minmax(12rem, 0.6fr) 1fr;
+  }
+}
+
+.results__media-error {
+  display: grid;
+  min-height: 20rem;
+  place-items: center;
+  padding: var(--space-8);
+  border-radius: var(--border-radius-lg);
+  background: var(--color-warm-white);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .results__header {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.comparison {
+  margin: 0;
+}
+
+.comparison__media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+  background: var(--color-border);
+  box-shadow: var(--shadow-md);
+  touch-action: manipulation;
+}
+
+.comparison__media > img,
+.comparison__before,
+.comparison__before img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.comparison__media img {
+  object-fit: cover;
+}
+
+.comparison__before {
+  width: var(--comparison-position);
+  overflow: hidden;
+}
+
+.comparison__before img {
+  width: var(--comparison-image-width);
+  max-width: none;
+}
+
+.comparison__label {
+  position: absolute;
+  top: var(--space-4);
+  z-index: 2;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--border-radius-full);
+  background: rgba(14, 24, 21, 0.78);
+  color: var(--color-white);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.comparison__label--before { left: var(--space-4); }
+.comparison__label--after { right: var(--space-4); }
+
+.comparison__divider {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: var(--comparison-position);
+  width: 2px;
+  transform: translateX(-1px);
+  background: var(--color-white);
+  box-shadow: 0 0 0 1px rgba(14, 24, 21, 0.2);
+  pointer-events: none;
+}
+
+.comparison__divider::after {
+  content: '↔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-deep-forest);
+  box-shadow: var(--shadow-md);
+}
+
+.comparison__range {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  touch-action: manipulation;
+}
+
+.comparison__range:focus-visible {
+  opacity: 1;
+  height: 44px;
+  top: calc(50% - 22px);
+  accent-color: var(--color-dark-teal);
+}
+
+.comparison figcaption {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-1) 0;
+}
+
+.comparison figcaption strong {
+  color: var(--color-text-primary);
+}
+
+.comparison figcaption span,
+.comparison figcaption small {
+  color: var(--color-text-secondary);
+}

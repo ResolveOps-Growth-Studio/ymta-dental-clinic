@@ -1,0 +1,14 @@
+.social-dock { position:fixed; right:max(20px,env(safe-area-inset-right)); bottom:calc(20px + env(safe-area-inset-bottom)); z-index:80; display:flex; flex-direction:column; align-items:flex-end; gap:12px; }
+.floating-contact { position:relative; display:flex; align-items:center; justify-content:center; width:52px; height:52px; border-radius:50%; background:var(--color-dark-teal); color:white; box-shadow:0 8px 24px rgba(14,24,21,.18); transition:transform .25s; }
+.floating-contact--whatsapp { background:#216c45; animation:social-arrive .55s .3s both; }
+.floating-contact--instagram { background:var(--color-warm-white); color:var(--color-dark-teal); animation:social-arrive .65s .65s both; }
+.floating-contact--whatsapp::after { content:''; position:absolute; inset:0; border:1px solid #216c45; border-radius:inherit; pointer-events:none; animation:contact-ring 5s 1s infinite; }
+.floating-contact--instagram svg { animation:instagram-pop 7s 2s infinite; }
+.floating-contact span { position:absolute; right:64px; padding:7px 12px; background:var(--color-dark-teal); color:white; border-radius:6px; font-size:12px; opacity:0; transform:translateX(7px); pointer-events:none; transition:opacity .2s,transform .2s; }
+.floating-contact:hover,.floating-contact:focus-visible { transform:translateY(-3px); }
+.floating-contact:hover span,.floating-contact:focus-visible span { opacity:1; transform:none; }
+@keyframes social-arrive { from { opacity:0; transform:translateY(18px) scale(.8); } to { opacity:1; transform:none; } }
+@keyframes contact-ring { 0%,65%,100% { opacity:0; transform:scale(1); } 70% { opacity:.4; transform:scale(1); } 92% { opacity:0; transform:scale(1.45); } }
+@keyframes instagram-pop { 0%,75%,100% { transform:none; } 81% { transform:scale(1.15) rotate(-8deg); } 87% { transform:scale(1) rotate(4deg); } }
+@media(max-width:1023px) { .social-dock { right:16px; bottom:calc(82px + env(safe-area-inset-bottom)); } .floating-contact { width:46px; height:46px; } }
+@media(prefers-reduced-motion:reduce) { .floating-contact,.floating-contact::after,.floating-contact svg { animation:none; transition:none; } .floating-contact span { transition:none; } }
